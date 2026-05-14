@@ -4,11 +4,17 @@
   connection: local
   tasks:
     - name: Create a folder on Desktop
-      file:
-        path: ~/Desktop/ansible-test
+      ansible.builtin.file:
+        path: ~/GIT/ansible-test
         state: directory
+        mode: '0755'
 
     - name: Create a text file inside it
-      copy:
+      ansible.builtin.copy:
         content: "Ansible made this file!"
-        dest: ~/Desktop/ansible-test/hello.txt
+        dest: ~/GIT/ansible-test/hello.txt
+        mode: '0644'
+
+
+
+        
