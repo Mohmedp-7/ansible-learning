@@ -11,7 +11,7 @@
 
     - name: Create a text file inside it
       ansible.builtin.copy:
-        content: "Ansible made this file!"
+        content: "Ansible made this file!\n I made this change afterwords"
         dest: ~/GIT/ansible-test/hello.txt
         mode: '0644'
 
